@@ -41,7 +41,7 @@
             picCarro.BackColor = Color.Transparent;
             picCarro.BackgroundImage = Properties.Resources.carro_removebg_preview;
             picCarro.BackgroundImageLayout = ImageLayout.Stretch;
-            picCarro.Location = new Point(278, 450);
+            picCarro.Location = new Point(325, 450);
             picCarro.Name = "picCarro";
             picCarro.Size = new Size(80, 80);
             picCarro.TabIndex = 1;
@@ -57,12 +57,12 @@
             labelPontuacao.AutoSize = true;
             labelPontuacao.BackColor = Color.Transparent;
             labelPontuacao.Font = new Font("Showcard Gothic", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            labelPontuacao.ForeColor = Color.Yellow;
-            labelPontuacao.Location = new Point(12, 9);
+            labelPontuacao.ForeColor = Color.Black;
+            labelPontuacao.Location = new Point(25, 9);
             labelPontuacao.Name = "labelPontuacao";
-            labelPontuacao.Size = new Size(93, 18);
+            labelPontuacao.Size = new Size(126, 18);
             labelPontuacao.TabIndex = 2;
-            labelPontuacao.Text = "PONTOS: 0";
+            labelPontuacao.Text = "PONTUAÇÃO: 0";
             labelPontuacao.Click += label1_Click;
             // 
             // FormJogoCorrida
@@ -71,7 +71,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.pista1;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(399, 550);
+            ClientSize = new Size(505, 550);
             Controls.Add(labelPontuacao);
             Controls.Add(picCarro);
             FormBorderStyle = FormBorderStyle.None;

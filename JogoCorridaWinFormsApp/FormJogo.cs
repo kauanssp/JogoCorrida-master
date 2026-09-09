@@ -18,7 +18,7 @@ namespace JogoCorridaWinFormsApp
                 Faixa1Inicio = 2,
                 Faixa1Fim = 198,
                 Faixa2Inicio = 202,
-                Faixa2Fim = 398
+                Faixa2Fim = 398,
             };
             jogo.YMaximo = 550;
             jogo.IniciaJogo();
@@ -101,8 +101,7 @@ namespace JogoCorridaWinFormsApp
 
                 if (jogo.Fase == 2)
                 {
-                    this.BackgroundImage =
-                        Properties.Resources.pistaCorrida;
+                    this.BackgroundImage = Properties.Resources.pistaFase2;
                 }
             }
             if (jogo.ChecarColisao())
@@ -138,7 +137,7 @@ namespace JogoCorridaWinFormsApp
             picGameOver.Image = Properties.Resources.gameOver;
             picGameOver.BackColor = Color.Black;
             picGameOver.SizeMode = PictureBoxSizeMode.StretchImage;
-            picGameOver.Size = new Size(400, 550);
+            picGameOver.Size = new Size(505, 550);
 
             picGameOver.Location = new Point(
                 (this.ClientSize.Width - picGameOver.Width) / 2,

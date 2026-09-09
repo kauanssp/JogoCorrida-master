@@ -122,7 +122,7 @@
 
         public void AtualizaFase()
         {
-            if (Pontuacao >= 50 && Fase == 1)
+            if (Pontuacao >= 100 && Fase == 1)
             {
                 Fase = 2;
             }
