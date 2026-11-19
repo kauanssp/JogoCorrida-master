@@ -115,7 +115,7 @@ namespace JogoCorridaWinFormsApp
         private void TocarSomBatida()
         {
             SoundPlayer sp = new SoundPlayer();
-            sp.SoundLocation = "D:\\Visual Studio Projects\\POE\\JogoCorrida27-08-master\\somBatida.wav";
+            sp.SoundLocation = Path.Combine(AppContext.BaseDirectory, "somBatida.wav");
             sp.Play();
             Thread.Sleep(1000);
         }
@@ -123,7 +123,7 @@ namespace JogoCorridaWinFormsApp
         private void TocarSomCorrida()
         {
             SoundPlayer sp = new SoundPlayer();
-            sp.SoundLocation = "D:\\Visual Studio Projects\\POE\\JogoCorrida27-08-master\\somJogo.wav";
+            sp.SoundLocation = Path.Combine(AppContext.BaseDirectory, "somJogo.wav");
             sp.Play();
         }
 
