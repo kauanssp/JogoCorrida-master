@@ -70,7 +70,7 @@ namespace JogoCorridaWinFormsApp
             }
         }
 
-        private void timerJogo_Tick(object sender, EventArgs e)
+        private async void timerJogo_Tick(object sender, EventArgs e)
         {
             picCarro.Location = new Point(
                 jogo.Carro.PosicaoX,
@@ -106,10 +106,9 @@ namespace JogoCorridaWinFormsApp
             }
             if (jogo.ChecarColisao())
             {
-                GameOver();
+                timerJogo.Stop();
+                await GameOver();
             }
-
-            Application.DoEvents();
         }
 
         private void TocarSomBatida()
@@ -117,7 +116,6 @@ namespace JogoCorridaWinFormsApp
             SoundPlayer sp = new SoundPlayer();
             sp.SoundLocation = Path.Combine(AppContext.BaseDirectory, "somBatida.wav");
             sp.Play();
-            Thread.Sleep(1000);
         }
 
         private void TocarSomCorrida()
